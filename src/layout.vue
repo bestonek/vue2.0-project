@@ -10,6 +10,17 @@
 		<div class="app-footer">3</div>
 	</div>
 </template>
+<script>
+	import Index from './pages/index.vue'
+	export default {
+		components:{Index},
+		methods:{
+			fnn(a){
+				console.log(a)
+			}
+		}
+	}
+</script>
 <style lang="scss">
 * {
 	padding: 0;
