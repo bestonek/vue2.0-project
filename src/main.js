@@ -4,6 +4,8 @@ import VueResource from 'vue-resource'
 import Vuex from 'vuex'
 import Layout from './layout.vue'
 import Index from './pages/index.vue'
+import Details from './pages/details.vue'
+import Count from './pages/details/count.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
@@ -16,6 +18,13 @@ let router = new VueRouter({
 		{
 			path: '/',
 			component: Index
+		}, {
+			path: '/details',
+			component: Details,
+			children: [{
+				path: 'count',
+				component: Count
+			}]
 		}
 
 	]
